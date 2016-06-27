@@ -1,0 +1,52 @@
+<?php
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+?>
+<div class="page-title">
+	<h1><?php echo $this->__('Submit Your Testimonial');?></h1>
+</div>
+<form action="<?php echo $this->getUrl('*/*/post'); ?>" method="post" id="testimonial-form" enctype="multipart/form-data" >
+		<ul class="form-list">
+			<li  class="name">
+				<label for="name" class="required">
+					<?php echo $this->__('Your Name');?>
+					<em>*</em>
+				</label>
+				<div class="input-box">
+					<input name="name" id="name" class="input-text required-entry" type="text" value="<?php echo $this->getCustomer()->getName();?>"  />
+				</div>
+			</li>
+			<li class="email">
+				<label for="email" class="required">
+					<?php echo $this->__('Your Email'); ?>
+					<em>*</em>
+				</label>
+				<div class="input-box">
+					<input name="email" id="email" class="input-text required-entry validate-email" type="text" value="<?php echo $this->getCustomer()->getEmail(); ?>">
+				</div>
+			</li>
+			<li class="required-std">
+				<label for="testimonial" class="required">
+					<?php echo $this->__('Your Testimonial'); ?>
+					<em>*</em>
+				</label>
+				<br>
+				<div class="std-input-box">
+					<textarea name="comment" id="comment" type="text" class="required-entry"></textarea>
+				</div>
+			</li>
+
+		</ul>
+		<?php echo $this->getChildHtml('captcha'); ?>
+			<button type="submit" title="<?php echo $this->__('Submit'); ?>" class="button"><span><span><?php echo $this->__('Submit Testimonial'); ?></span></span></button>
+	</form>
+	
+	<script type="text/javascript">
+	//<![CDATA[
+		var dataForm = new VarienForm('testimonial-form', true);
+	//]]>
+	</script>

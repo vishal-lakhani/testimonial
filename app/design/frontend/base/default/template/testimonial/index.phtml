@@ -1,0 +1,51 @@
+<?php
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $collection = $this->getCollection(); ?>
+<div class="page-title">
+	<h1><?php echo $this->__('Customer Testimonials');?></h1>
+	<div class="submit-testimonial">
+		<button class="button" onclick="setLocation('<?php echo Mage::getBaseUrl()."testimonial/form"; ?>')">
+			<span>
+				<span>
+					<?php echo $this->__('Submit Your Testimonial');?>					
+				</span>
+			</span>
+		</button>
+	</div>
+</div>
+<div class="testimonial-pager">
+<?php echo $this->getPagerHtml(); ?>
+</div>
+<?php if($collection->getSize()): ?>
+        <?php foreach ($collection as $obj): ?>
+            <?php if($obj->getStatus()==1): ?>
+			<div class="customer-testimonials-content<?php if($i==0):?> first<?php endif;?><?php if($i==(count($testimonial)-1)):?> last<?php endif;?>" name="<?php echo $obj->getName(); ?>" id="<?php echo $obj->getName(); ?>">
+				<div class="testimonial-content">
+				    <p>
+					<div class="comment more">
+					<?php echo $obj->getComment();?>
+					</div>
+					</p>
+				</div>
+				<div class="testimonial-source">
+					<span class="testimonial-author"><?php echo $obj->getName(); ?></span>
+					<span class="testimonial-date">
+						<?php echo Mage::helper('testimonial')->getDateToDisplay($obj->getCreatedDate()); ?>
+					</span>
+				</div>
+			</div>
+			<?php endif ?>
+        <?php endforeach; ?>
+<div class="testimonial-pager">
+<?php echo $this->getPagerHtml(); ?>
+</div>
+<?php else: ?>
+    <p><?php echo $this->__('There is no any testimonial.'); ?></p>
+<?php endif ?>

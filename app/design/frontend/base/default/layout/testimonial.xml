@@ -1,0 +1,45 @@
+<?xml version="1.0"?>   
+<!--
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+-->
+<layout version="0.1.0">
+	<default>
+		<reference name="top.links">	
+			<action method="addLink" module="testimonial" ifconfig="vishal_testimonial_section/vishal_testimonial_group/vishal_testimonial_enable">
+				<name>Testimonial</name>
+				<url>{{baseUrl}}testimonial</url>
+			</action>
+		</reference>
+	</default>
+  <testimonial_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>
+	<reference name="head">
+		<action method="addCss"><stylesheet>css/vishal/testimonial.css</stylesheet> </action>
+		<action method="addItem"><type>js</type><name>vishal/testimonial.js</name></action>
+	</reference>
+    <reference name="content">   
+		<block type="testimonial/index" name="testimonial_index" template="testimonial/index.phtml"/>
+    </reference>   
+  </testimonial_index_index>
+  <testimonial_form_index>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/vishal/testimonial.css</stylesheet> </action>
+		</reference>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="testimonial/form" name="form" template="testimonial/form.phtml">
+				<block type="testimonial/captcha" name="captcha" template="testimonial/captcha.phtml"/>
+			</block>
+		</reference>
+	</testimonial_form_index>
+</layout>   
+	

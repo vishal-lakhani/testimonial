@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+-->
+<config>
+	  <tabs>
+		<vishal_testimonial_tab translate="label" module="testimonial">
+            <label>Vishal Testimonial</label>
+            <sort_order>0</sort_order>
+        </vishal_testimonial_tab>
+	  </tabs>
+	  <sections>
+		<vishal_testimonial_section  translate="label" module="testimonial">                    
+		<label>Setting</label>
+		<tab>vishal_testimonial_tab</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <vishal_testimonial_group translate="label"> 
+					  <label>General</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <vishal_testimonial_enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </vishal_testimonial_enable>
+					   </fields>
+					   <fields>
+                          <vishal_testimonial_pagerdropdown translate="label">
+                            <label>Testimonial per Page on List Allowed Values</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Comma-separated. ex:5,10,15</comment>
+                          </vishal_testimonial_pagerdropdown>
+					   </fields>
+					   </vishal_testimonial_group>
+					</groups>
+		</vishal_testimonial_section>
+	  </sections>
+</config>

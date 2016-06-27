@@ -1,0 +1,23 @@
+<?php
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+?>
+<div class="input-box-captcha">
+    <input type="text" name="captcha_code" size="10" maxlength="6" class="input-text required-entry" />
+	<img id="captcha" src="<?php echo Mage::getBaseUrl()."testimonial/form/captcha"; ?>" alt="CAPTCHA Image" />
+    <a  class="refresh-captcha" style="border: none;" href="" title="refresh image" onclick="refresh_image(); return false;"><img src="<?php echo $this->getSkinUrl('images/vishal/refresh.gif')  ?>" alt="refresh image" border="0" onclick=""/></a>
+    <br />
+    <p><?php echo $this->__('Copy the text in the image above')?></p> 
+</div> 
+
+<script type="text/javascript">
+	function refresh_image() {
+		$('captcha').src = '<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif')?>';
+		var new_image = '<?php echo Mage::getBaseUrl()."testimonial/form/captcha"; ?>?v=' + Math.random();
+		$('captcha').src = new_image;
+	}
+</script>

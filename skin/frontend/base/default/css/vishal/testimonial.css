@@ -1,0 +1,49 @@
+/**
+ * @category   Customer Testimonial
+ * @package    Vishal_Testimonial
+ * @copyright  Copyright (c) 2016 Vishal Lakhani
+ * @author     Vishal Lakhani <vishal.lakhani@yahoo.co.in>
+ */
+.testimonial-content-avatar {float: left; margin: 4px 10px 0 0;}
+.testimonial-content p {color:#808080;font-family:"Lucida Sans Unicode",Arial,Helvetica,sans-serif;font-size:15px !important;font-style:normal !important;line-height:18px;margin:8px 0 !important;}
+.testimonial-source {font-family: Lucida Sans Unicode, Arial, sans-serif;margin:10px 5px;}
+.testimonial-author {font-size: 12px;font-style: normal;color: #0A233C;text-align: right;display: block;font-weight: bold;}
+.testimonial-www {font-style: normal;text-align: right;display: block;}
+.testimonial-date {font-size: 10px;text-align: right;display: block;font-weight: bold;}
+.customer-testimonials .page-title {margin: 0 0 10px;}
+.customer-testimonials .page-title h1 {color: #464646;float: left;font-size: 17px;font-weight: bold;text-transform: uppercase;}
+.customer-testimonials .page-title button {float: right;}
+.block-testimonial .testimonial-entry {padding: 0;}
+.block-testimonial .testimonial-content {margin: 0 !important;font-style: italic;padding-bottom: 5px;}
+.block-testimonial .testimonial-container {padding: 8px;}
+.block-testimonial .pagination a {height: 0;overflow: hidden;padding-top: 18px;width: 18px;display: block;}
+.testimonial-submit {float: left; width: 685px;}
+.testimonial-submit .page-title h1 {color: #464646; font-weight: bold; font-size: 17px; text-transform: uppercase; }
+.testimonial-submit .form-list {float: left; width: 100%;}
+.testimonial-submit .form-list li {float: left; width: 255px; margin: 0 20px 7px 0;}
+.testimonial-submit .form-list li .input-text {float: left; width: 255px; }
+.testimonial-submit .form-list li .std-input-box { width: 535px !important;clear: both; display: block;}
+.testimonial-submit .form-list li.required-std {float: left; width: 100% !important;}
+.testimonial-submit .form-list li.required-std .std-input-box .required-entry {width: 530px !important;}
+.testimonial-submit .form-list li.required-std {margin: 0 !important;}
+.customer-testimonials .customer-testimonials-content {float: left;margin: 20px 10px 0;padding: 10px;border: 1px solid #dfdfdf;width: 645px;}
+.customer-testimonials-content {border-bottom: 2px solid #ccc;clear: both;margin-bottom: 5px;}
+.customer-testimonials .customer-testimonials-content:hover { border: 1px solid #ffde1c;}
+.customer-testimonials .customer-testimonials-content.last { margin: 20px 10px;}
+.submit-testimonial{float: right;width: auto;}
+.submit-testimonial-form{float: left;width: auto;}
+.testimonial-pager{float:left;width:auto;border:0.5 solid gray;}
+.customer-testimonials-content{border:0.5 solid gray;}
+.testimonial-content {background: #f5f5f5; padding: 10px 15px; border-radius: 10px;}
+.customer-testimonials-content{clear:both; margin-bottom:10px;}
+.std-input-box #comment{height:150px;width:400px;}
+.comment .more a {color: #0254EB}
+.comment .more a:visited {color: #0254EB}
+.comment .more a.morelink {text-decoration:none;outline: none;}
+.morecontent span {display: none;}
+.comment .more{width: 100%;}
+@media only screen and (max-width: 480px){
+	.submit-testimonial .button{font-size:11px !important;}
+	.testimonial-content p{font-size:11px !important;}
+	.required-std #comment{height:150px !important;width:300px!important;}
+}
